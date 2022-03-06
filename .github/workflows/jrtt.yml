@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ZhiYi-N/script
+          repository: 12dgadfa/zq
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -37,7 +37,7 @@ jobs:
           npm install
       - name: '运行 【今日头条极速版】'
         run: |
-          node jrtt.js
+          node Task/jrtt.js
         env:
           JRTTSIGNURL: ${{ secrets.JRTTSIGNURL }}
           JRTTSIGNKEY: ${{ secrets.JRTTSIGNKEY }}
